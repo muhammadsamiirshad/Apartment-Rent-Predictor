@@ -26,7 +26,7 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
         <footer className="py-4 px-6 bg-background/80 backdrop-blur-md">
           <div className="flex items-center justify-between">
             <p className="text-xs text-muted-foreground">
-              © 2025 <span className="text-primary font-medium">ML Analytics</span>
+              © 2025 <span className="text-primary font-medium">Muhammad Sami</span>
             </p>
             <div className="text-xs text-muted-foreground flex gap-6">
               <span className="hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>

@@ -339,7 +339,7 @@ function SidebarNav() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].aside, {
         className: "h-screen bg-background/80 dark:bg-background/95 flex flex-col backdrop-blur-md",
         animate: {
-            width: expanded ? '280px' : '80px'
+            width: expanded ? '300px' : '80px'
         },
         transition: {
             duration: 0.3
@@ -1335,7 +1335,7 @@ function DashboardLayout({ children, title, subtitle }) {
                                         "© 2025 ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-primary font-medium",
-                                            children: "ML Analytics"
+                                            children: "Muhammad Sami"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/dashboard-layout.tsx",
                                             lineNumber: 29,
@@ -2304,7 +2304,7 @@ function AboutPage() {
                                     className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
+                                            href: "https://github.com/muhammadsamiirshad/Apartment-Rent-Predictor",
                                             className: "flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2352,7 +2352,7 @@ function AboutPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
+                                            href: "https://github.com/muhammadsamiirshad/Apartment-Rent-Predictor",
                                             className: "flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2400,7 +2400,7 @@ function AboutPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
+                                            href: "https://archive.ics.uci.edu/dataset/555/apartment+for+rent+classified",
                                             className: "flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2478,7 +2478,7 @@ function AboutPage() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mt-1",
-                            children: "© 2025 | An ML-powered apartment rent prediction project"
+                            children: "© 2025 | Muhammad Sami"
                         }, void 0, false, {
                             fileName: "[project]/src/app/about/page.tsx",
                             lineNumber: 324,
