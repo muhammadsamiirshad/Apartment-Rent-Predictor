@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400?text=Apartment+Rent+Predictor" alt="Apartment Rent Predictor" width="800">
+  <img src="image/README/1746354936942.png" alt="Apartment Rent Predictor Dashboard" width="800">
 </p>
 
 ## 📋 Overview
