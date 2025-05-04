@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Enhanced primary colors with gradients */
+  --primary: #4f46e5; /* Vibrant indigo */
+  --primary-hover: #4338ca;
+  --primary-gradient: linear-gradient(135deg, #4f46e5, #6366f1);
+  --primary-foreground: #ffffff;
+  
+  /* Enhanced secondary colors */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  
+  /* Enhanced accent colors */
+  --accent: #f0f9ff;
+  --accent-foreground: #0284c7;
+  
+  /* Enhancing muted colors */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  
+  /* Card elements with subtle shadow */
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  /* Enhanced border */
+  --border: #e2e8f0;
+  
+  /* Colorful accents */
+  --success: #10b981; /* Emerald */
+  --success-foreground: #ffffff;
+  --warning: #f59e0b; /* Amber */
+  --warning-foreground: #ffffff;
+  --danger: #ef4444; /* Red */
+  --danger-foreground: #ffffff;
+  --info: #3b82f6; /* Blue */
+  --info-foreground: #ffffff;
+  
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode class-based theme - used by next-themes */
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  
+  /* Enhanced primary colors for dark mode */
+  --primary: #6366f1; /* Brighter indigo for dark mode */
+  --primary-hover: #818cf8;
+  --primary-gradient: linear-gradient(135deg, #6366f1, #818cf8);
+  --primary-foreground: #ffffff;
+  
+  /* Enhanced secondary colors */
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  
+  /* Enhanced accent colors */
+  --accent: #0c4a6e;
+  --accent-foreground: #bae6fd;
+  
+  /* Enhanced muted colors */
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  
+  /* Card elements with subtle glow */
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  
+  /* Enhanced border */
+  --border: #334155;
+  
+  /* Colorful accents for dark mode */
+  --success: #34d399; /* Lighter emerald */
+  --success-foreground: #ffffff;
+  --warning: #fbbf24; /* Lighter amber */
+  --warning-foreground: #ffffff;
+  --danger: #f87171; /* Lighter red */
+  --danger-foreground: #ffffff;
+  --info: #60a5fa; /* Lighter blue */
+  --info-foreground: #ffffff;
+}
+
+/* This keeps the system preference working too */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    
+    /* Enhanced primary colors for dark mode */
+    --primary: #6366f1; /* Brighter indigo for dark mode */
+    --primary-hover: #818cf8;
+    --primary-gradient: linear-gradient(135deg, #6366f1, #818cf8);
+    --primary-foreground: #ffffff;
+    
+    /* Enhanced secondary colors */
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    
+    /* Enhanced accent colors */
+    --accent: #0c4a6e;
+    --accent-foreground: #bae6fd;
+    
+    /* Enhanced muted colors */
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    
+    /* Card elements with subtle glow */
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    
+    /* Enhanced border */
+    --border: #334155;
+    
+    /* Colorful accents for dark mode */
+    --success: #34d399; /* Lighter emerald */
+    --success-foreground: #ffffff;
+    --warning: #fbbf24; /* Lighter amber */
+    --warning-foreground: #ffffff;
+    --danger: #f87171; /* Lighter red */
+    --danger-foreground: #ffffff;
+    --info: #60a5fa; /* Lighter blue */
+    --info-foreground: #ffffff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Enhanced animations */
+@layer utilities {
+  .animate-in {
+    animation: animateIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  .animate-out {
+    animation: animateOut 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes animateOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Gradients */
+  .bg-gradient-primary {
+    background: var(--primary-gradient);
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+  }
+}
