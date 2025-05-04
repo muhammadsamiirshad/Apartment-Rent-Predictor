@@ -274,7 +274,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <a 
-                href="#" 
+                href="https://github.com/muhammadsamiirshad/Apartment-Rent-Predictor" 
                 className="flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5"
               >
                 <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-3">
@@ -287,7 +287,7 @@ export default function AboutPage() {
               </a>
               
               <a 
-                href="#" 
+                href="https://github.com/muhammadsamiirshad/Apartment-Rent-Predictor" 
                 className="flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5"
               >
                 <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg mr-3">
@@ -300,7 +300,7 @@ export default function AboutPage() {
               </a>
               
               <a 
-                href="#" 
+                href="https://archive.ics.uci.edu/dataset/555/apartment+for+rent+classified" 
                 className="flex items-center p-4 bg-background/50 rounded-lg border border-border transition-all hover:border-primary/30 hover:bg-primary/5"
               >
                 <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg mr-3">
@@ -321,7 +321,7 @@ export default function AboutPage() {
           className="mt-16 text-center text-sm text-muted-foreground"
         >
           <p>ApartmentRentPredictor v1.0.0</p>
-          <p className="mt-1">© 2025 | An ML-powered apartment rent prediction project</p>
+          <p className="mt-1">© 2025 | Muhammad Sami</p>
         </motion.div>
       </motion.div>
     </DashboardLayout>
