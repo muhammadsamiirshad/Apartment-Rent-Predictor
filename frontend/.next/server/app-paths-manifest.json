@@ -1,0 +1,10 @@
+{
+  "/about/page": "app/about/page.js",
+  "/clustering/page": "app/clustering/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/history/page": "app/history/page.js",
+  "/models/page": "app/models/page.js",
+  "/page": "app/page.js",
+  "/predict/page": "app/predict/page.js",
+  "/settings/page": "app/settings/page.js"
+}
