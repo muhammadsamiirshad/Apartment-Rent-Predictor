@@ -6,5 +6,5 @@ if __name__ == "__main__":
     # Create database tables
     create_tables()
     
-    # Run FastAPI server on port 8080 instead of default 8000
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    # Run FastAPI server on default port 8000
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -87,7 +87,7 @@ export default function HomePage() {
     const fetchData = async () => {
       try {
         // Fetch model metrics
-        const metricsResponse = await fetch('http://localhost:8080/model-metrics/');
+        const metricsResponse = await fetch('http://localhost:8000/model-metrics/');
         if (metricsResponse.ok) {
           const metricsData = await metricsResponse.json();
           setModelMetrics(metricsData);
@@ -116,14 +116,14 @@ export default function HomePage() {
         }
         
         // Fetch predictions count
-        const predictionsResponse = await fetch('http://localhost:8080/predictions/');
+        const predictionsResponse = await fetch('http://localhost:8000/predictions/');
         if (predictionsResponse.ok) {
           const predictionsData = await predictionsResponse.json();
           setCounts(prev => ({ ...prev, predictions: predictionsData.length }));
         }
         
         // Fetch clusters count
-        const clusteringResponse = await fetch('http://localhost:8080/clustering/');
+        const clusteringResponse = await fetch('http://localhost:8000/clustering/');
         if (clusteringResponse.ok) {
           const clusteringData = await clusteringResponse.json();
           setCounts(prev => ({ ...prev, clusters: clusteringData.length }));

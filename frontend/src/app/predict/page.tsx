@@ -81,7 +81,7 @@ export default function PredictPage() {
     setError(null);
 
     try {
-      const response = await fetch(`http://localhost:8080/predict/?model_name=${modelType}`, {
+      const response = await fetch(`http://localhost:8000/predict/?model_name=${modelType}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

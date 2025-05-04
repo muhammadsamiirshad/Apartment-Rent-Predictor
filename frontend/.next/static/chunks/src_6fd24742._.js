@@ -31,7 +31,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-themes/dist/index.mjs [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -43,7 +43,7 @@ const NavItem = ({ href, label, icon, isExpanded, isActive })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
         href: href,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-            className: `flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-primary/10 text-primary shadow-sm' : 'hover:bg-muted/40 text-muted-foreground hover:text-foreground'}`,
+            className: `flex items-center ${isExpanded ? 'justify-start' : 'justify-center'} gap-3 px-3 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-primary/10 text-primary shadow-sm' : 'hover:bg-muted/40 text-muted-foreground hover:text-foreground'}`,
             whileHover: {
                 scale: 1.03
             },
@@ -96,67 +96,76 @@ const NavGroup = ({ title, children, icon, isExpanded })=>{
         className: "mb-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                className: "flex items-center justify-between w-full px-3 py-2 text-sm text-muted-foreground rounded-xl hover:bg-muted/40 hover:text-foreground",
+                className: `flex items-center ${isExpanded ? 'justify-between' : 'justify-center'} w-full px-3 py-2 text-sm text-muted-foreground rounded-xl hover:bg-muted/40 hover:text-foreground`,
                 onClick: ()=>setIsOpen(!isOpen),
                 whileTap: {
                     scale: 0.98
                 },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-3",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-md flex-shrink-0",
-                                children: icon
+                children: isExpanded ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-md flex-shrink-0",
+                                    children: icon
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                                    lineNumber: 82,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                                    initial: {
+                                        opacity: 0
+                                    },
+                                    animate: {
+                                        opacity: 1
+                                    },
+                                    exit: {
+                                        opacity: 0
+                                    },
+                                    className: "font-medium",
+                                    children: title
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                                    lineNumber: 83,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                            lineNumber: 81,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                            animate: {
+                                rotate: isOpen ? 180 : 0
+                            },
+                            transition: {
+                                duration: 0.2
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                                size: 16
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 80,
-                                columnNumber: 11
-                            }, this),
-                            isExpanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                initial: {
-                                    opacity: 0
-                                },
-                                animate: {
-                                    opacity: 1
-                                },
-                                exit: {
-                                    opacity: 0
-                                },
-                                className: "font-medium",
-                                children: title
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 82,
-                                columnNumber: 13
+                                lineNumber: 96,
+                                columnNumber: 15
                             }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 79,
-                        columnNumber: 9
-                    }, this),
-                    isExpanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                        animate: {
-                            rotate: isOpen ? 180 : 0
-                        },
-                        transition: {
-                            duration: 0.2
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
-                            size: 16
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 97,
+                            lineNumber: 92,
                             columnNumber: 13
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 93,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "text-md",
+                    children: icon
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                    lineNumber: 100,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
                 lineNumber: 74,
                 columnNumber: 7
@@ -184,17 +193,17 @@ const NavGroup = ({ title, children, icon, isExpanded })=>{
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 111,
+                        lineNumber: 113,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                    lineNumber: 104,
+                    lineNumber: 106,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                lineNumber: 102,
+                lineNumber: 104,
                 columnNumber: 7
             }, this)
         ]
@@ -206,19 +215,131 @@ const NavGroup = ({ title, children, icon, isExpanded })=>{
 };
 _s(NavGroup, "mEi83NlPXQzy/XIDfTYWzOSvaHw=");
 _c1 = NavGroup;
-function SidebarNav() {
+// Client-side only theme toggle to prevent hydration mismatch
+const ThemeToggle = ({ expanded })=>{
     _s1();
-    const [expanded, setExpanded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const { theme, setTheme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
-    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Only show the UI when mounted on client to avoid hydration mismatch
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ThemeToggle.useEffect": ()=>{
+            setMounted(true);
+        }
+    }["ThemeToggle.useEffect"], []);
     const toggleTheme = ()=>{
         setTheme(theme === 'dark' ? 'light' : 'dark');
     };
+    if (!mounted) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
+            className: `flex items-center ${expanded ? 'justify-start' : 'justify-center'} gap-3 w-full px-3 py-3 rounded-xl bg-primary/10 hover:bg-primary/15`,
+            whileHover: {
+                scale: 1.03
+            },
+            whileTap: {
+                scale: 0.97
+            },
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "text-xl opacity-0",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
+                        size: 20,
+                        className: "text-primary"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                        lineNumber: 145,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                    lineNumber: 144,
+                    columnNumber: 9
+                }, this),
+                expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "text-sm font-medium text-foreground opacity-0",
+                    children: "Theme"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                    lineNumber: 148,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+            lineNumber: 139,
+            columnNumber: 7
+        }, this);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
+        onClick: toggleTheme,
+        className: `flex items-center ${expanded ? 'justify-start' : 'justify-center'} gap-3 w-full px-3 py-3 rounded-xl ${theme === 'dark' ? 'bg-primary/10 hover:bg-primary/15' : 'bg-primary/10 hover:bg-primary/15'}`,
+        whileHover: {
+            scale: 1.03
+        },
+        whileTap: {
+            scale: 0.97
+        },
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "text-xl",
+                children: theme === 'dark' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
+                    size: 20,
+                    className: "text-primary"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                    lineNumber: 169,
+                    columnNumber: 11
+                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
+                    size: 20,
+                    className: "text-primary"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                    lineNumber: 171,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                lineNumber: 167,
+                columnNumber: 7
+            }, this),
+            expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                initial: {
+                    opacity: 0
+                },
+                animate: {
+                    opacity: 1
+                },
+                exit: {
+                    opacity: 0
+                },
+                className: "text-sm font-medium text-foreground",
+                children: theme === 'dark' ? 'Light Mode' : 'Dark Mode'
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+                lineNumber: 175,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/sidebar-nav.tsx",
+        lineNumber: 157,
+        columnNumber: 5
+    }, this);
+};
+_s1(ThemeToggle, "uGU5l7ciDSfqFDe6wS7vfMb29jQ=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"]
+    ];
+});
+_c2 = ThemeToggle;
+function SidebarNav() {
+    _s2();
+    const [expanded, setExpanded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const isActive = (path)=>pathname === path;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].aside, {
         className: "h-screen bg-background/80 dark:bg-background/95 flex flex-col backdrop-blur-md",
         animate: {
-            width: expanded ? '280px' : '70px'
+            width: expanded ? '300px' : '80px'
         },
         transition: {
             duration: 0.3
@@ -242,26 +363,26 @@ function SidebarNav() {
                                     className: "h-5 w-5 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 208,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 145,
+                                lineNumber: 207,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "text-lg font-bold text-primary",
-                                children: "ML Analytics"
+                                children: "ApartmentRentPredictor"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 148,
+                                lineNumber: 210,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 140,
+                        lineNumber: 202,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mx-auto bg-primary/10 dark:bg-primary/15 p-2 rounded-xl",
@@ -269,12 +390,12 @@ function SidebarNav() {
                             className: "h-5 w-5 text-primary"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 154,
+                            lineNumber: 216,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 153,
+                        lineNumber: 215,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -287,24 +408,24 @@ function SidebarNav() {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 162,
+                            lineNumber: 224,
                             columnNumber: 23
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 162,
+                            lineNumber: 224,
                             columnNumber: 51
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 157,
+                        lineNumber: 219,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                lineNumber: 138,
+                lineNumber: 200,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -316,7 +437,7 @@ function SidebarNav() {
                             size: 20
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 169,
+                            lineNumber: 231,
                             columnNumber: 17
                         }, void 0),
                         label: "Dashboard",
@@ -324,7 +445,7 @@ function SidebarNav() {
                         isActive: isActive('/')
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 167,
+                        lineNumber: 229,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavGroup, {
@@ -333,7 +454,7 @@ function SidebarNav() {
                             size: 20
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 175,
+                            lineNumber: 237,
                             columnNumber: 42
                         }, void 0),
                         isExpanded: expanded,
@@ -344,7 +465,7 @@ function SidebarNav() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 240,
                                     columnNumber: 19
                                 }, void 0),
                                 label: "Apartment Prediction",
@@ -352,7 +473,7 @@ function SidebarNav() {
                                 isActive: isActive('/predict')
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 176,
+                                lineNumber: 238,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
@@ -361,7 +482,7 @@ function SidebarNav() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 247,
                                     columnNumber: 19
                                 }, void 0),
                                 label: "Model Comparison",
@@ -369,7 +490,7 @@ function SidebarNav() {
                                 isActive: isActive('/models')
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 183,
+                                lineNumber: 245,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
@@ -378,7 +499,7 @@ function SidebarNav() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 254,
                                     columnNumber: 19
                                 }, void 0),
                                 label: "Clustering",
@@ -386,13 +507,13 @@ function SidebarNav() {
                                 isActive: isActive('/clustering')
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 190,
+                                lineNumber: 252,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 175,
+                        lineNumber: 237,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavGroup, {
@@ -401,7 +522,7 @@ function SidebarNav() {
                             size: 20
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 199,
+                            lineNumber: 261,
                             columnNumber: 41
                         }, void 0),
                         isExpanded: expanded,
@@ -411,7 +532,7 @@ function SidebarNav() {
                                 size: 18
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 202,
+                                lineNumber: 264,
                                 columnNumber: 19
                             }, void 0),
                             label: "Prediction History",
@@ -419,12 +540,12 @@ function SidebarNav() {
                             isActive: isActive('/history')
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 200,
+                            lineNumber: 262,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 199,
+                        lineNumber: 261,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -435,7 +556,7 @@ function SidebarNav() {
                                 children: "System"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 210,
+                                lineNumber: 272,
                                 columnNumber: 24
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
@@ -444,7 +565,7 @@ function SidebarNav() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 213,
+                                    lineNumber: 275,
                                     columnNumber: 19
                                 }, void 0),
                                 label: "About",
@@ -452,7 +573,7 @@ function SidebarNav() {
                                 isActive: isActive('/about')
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 211,
+                                lineNumber: 273,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
@@ -461,7 +582,7 @@ function SidebarNav() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                    lineNumber: 220,
+                                    lineNumber: 282,
                                     columnNumber: 19
                                 }, void 0),
                                 label: "Settings",
@@ -469,101 +590,53 @@ function SidebarNav() {
                                 isActive: isActive('/settings')
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 218,
+                                lineNumber: 280,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                        lineNumber: 209,
+                        lineNumber: 271,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                lineNumber: 166,
+                lineNumber: 228,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "p-2 mt-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                    onClick: toggleTheme,
-                    className: `flex items-center gap-3 w-full px-3 py-3 rounded-xl ${theme === 'dark' ? 'bg-primary/10 hover:bg-primary/15' : 'bg-primary/10 hover:bg-primary/15'}`,
-                    whileHover: {
-                        scale: 1.03
-                    },
-                    whileTap: {
-                        scale: 0.97
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-xl",
-                            children: theme === 'dark' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                size: 20,
-                                className: "text-primary"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 240,
-                                columnNumber: 33
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                size: 20,
-                                className: "text-primary"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                                lineNumber: 240,
-                                columnNumber: 78
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 239,
-                            columnNumber: 11
-                        }, this),
-                        expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                            initial: {
-                                opacity: 0
-                            },
-                            animate: {
-                                opacity: 1
-                            },
-                            exit: {
-                                opacity: 0
-                            },
-                            className: "text-sm font-medium text-foreground",
-                            children: theme === 'dark' ? 'Light Mode' : 'Dark Mode'
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                            lineNumber: 243,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ThemeToggle, {
+                    expanded: expanded
+                }, void 0, false, {
                     fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                    lineNumber: 229,
+                    lineNumber: 291,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-                lineNumber: 228,
+                lineNumber: 290,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/sidebar-nav.tsx",
-        lineNumber: 133,
+        lineNumber: 195,
         columnNumber: 5
     }, this);
 }
-_s1(SidebarNav, "BuZ5lyyqEYD3mPYa/v88MHJAQbw=", false, function() {
+_s2(SidebarNav, "ieFJYl7N5Z/MFGZbI7UyTVMW13Q=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
     ];
 });
-_c2 = SidebarNav;
-var _c, _c1, _c2;
+_c3 = SidebarNav;
+var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "NavItem");
 __turbopack_context__.k.register(_c1, "NavGroup");
-__turbopack_context__.k.register(_c2, "SidebarNav");
+__turbopack_context__.k.register(_c2, "ThemeToggle");
+__turbopack_context__.k.register(_c3, "SidebarNav");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -1262,7 +1335,7 @@ function DashboardLayout({ children, title, subtitle }) {
                                         "© 2025 ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-primary font-medium",
-                                            children: "ML Analytics"
+                                            children: "Muhammad Sami"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/dashboard-layout.tsx",
                                             lineNumber: 29,
@@ -1412,7 +1485,7 @@ function PredictPage() {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`http://localhost:8080/predict/?model_name=${modelType}`, {
+            const response = await fetch(`http://localhost:8000/predict/?model_name=${modelType}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
